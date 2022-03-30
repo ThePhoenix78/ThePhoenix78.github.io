@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>ThePhoenix78</title>
-    </head>
-    <body>
-        <h1>HELLO WORLD</h1>
-        <h2>Python best langage</h2>
+<html lang="fr">
+<head>
+    <title>Ma Page web</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="hero-bg">
+    <section class="top">
+        <header>
+         Bienvenue!
+        </header>
 
-    </body>
+        <h2>Recherche d'emplois</h2>
+        <p >Vous pouvez effectuer une recherche d'emplois dans la base de données de la province ici</p>
+        <form method="post" action="/<?php echo $dossier; ?>/index.php/emplois">
+            <div class="form-left">
+                <label id="emp" for="emplois">Emplois</label>
+                <input type="text" name="emplois" id="emplois" placeholder="Recherche">
+            </div>
+            <input type="submit" value="Rechercher" id="cta-btn">
+        </form>
+
+
+        <div class="form-container">
+            <div class="form-left">
+              <!--ul>
+                <?php $i=0; foreach( $posts as $post ) :?>
+                  <li>
+                    <a id="abc" href="postEmplois?id=<?php echo $posts[$i]['id']; ?>">
+                      <?php echo $posts[$i]['title']; $i++;?>
+                    </a>
+                  </li>
+                <?php endforeach ?>
+              </ul-->
+            </div>
+        </div>
+        <!--form method="post" action="">
+          <input type="submit" value="Retour">
+        </form>
+    </div>
+    <form method="post" action="/<?php echo $dossier; ?>/index.php/logOut">
+      <input type="submit" value="Déconnexion">
+    </form-->
+    </section>
+    <section class="authentic">
+        <div class="right-col">
+            <h2>Université</h2>
+            <p>Section emplois</p>
+        </div>
+        <img src="/images/unc.png" alt="Picture of the unc logo">
+    </section>
+</body>
 </html>
