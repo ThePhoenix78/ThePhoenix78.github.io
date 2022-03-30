@@ -13,7 +13,7 @@ body {
 
 .hero-bg {
     background: #307D99 url('../images/unc.jpg');
-    background-position: 12% 83%;
+    background-position: 100% 100%;/*12% 83%;*/
     color: white;
     text-align: center;
     padding-bottom: 4em;
