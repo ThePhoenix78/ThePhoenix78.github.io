@@ -13,8 +13,7 @@ body {
 
 .hero-bg {
     background: #307D99 url('unc.jpg');
-    background-position: 12% 83%;
-    width: 100%;
+    background-position: 13% 83%;
     color: white;
     text-align: center;
     padding-bottom: 4em;
@@ -113,7 +112,7 @@ input[type=text],input[type=password],input[type=email]  {
     margin-top: .3em;
 }
 
-input[type=button],input[type=submit] {
+input[type=button], input[type=submit] {
     background-color: #0451f8;
     border: none;
     width: 100%;
@@ -197,6 +196,16 @@ h2::before {
 
 img {
     width: 100%;
+}
+
+.logo {
+    width: 70%;
+    margin-left: 20%;
+    border: none;
+    color: white;
+    padding: 1em 0;
+    border-radius: 2.5em;
+    font-size: 1.3em;
 }
 
 p {

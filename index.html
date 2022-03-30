@@ -3,6 +3,12 @@
 <head>
     <title>Ma Page web</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/dndTree.js"></script>
+    <link rel="stylesheet" href="css/dndtree.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -12,23 +18,23 @@
          Bienvenue!
         </header>
 
-        <h2>Box faite par Ludo</h2>
+        <h2>Box faite par la team C</h2>
         <div class="form-container">
             <div class="form-left">
-                <p>afficher le graphe ici</p>
+                <div id="tree-container"></div>
             </div>
         </div>
-        <form method="post" action="">
+        <!--form method="post" action="">
             <div class="form-left">
             </div>
             <input type="submit" value="Afficher" id="cta-btn">
-        </form>
+        </form-->
     </section>
     <section class="authentic">
         <div class="right-col">
             <h2>Université</h2>
         </div>
-        <!--img src="images/unc.png" alt="Picture of the unc logo"-->
+        <img src="images/unc.png" alt="Picture of the unc logo", class="logo">
     </section>
 </div>
 </body>
