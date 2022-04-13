@@ -145,7 +145,7 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
 
     // define the baseSvg, attaching a class for styling and the zoomListener
     var baseSvg = d3.select("#tree-container").append("svg")
-        .attr("width", viewerWidth)
+        .attr("width", viewerWidth*0.57)
         .attr("height", viewerHeight)
         .attr("class", "overlay")
         .call(zoomListener);
@@ -169,11 +169,11 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
             }
             if (dragStarted) {
                 domNode = this;
-                initiateDrag(d, domNode);
+                //initiateDrag(d, domNode);
             }
 
             // get coords of mouseEvent relative to svg container to allow for panning
-            relCoords = d3.mouse($('svg').get(0));
+            //relCoords = d3.mouse($('svg').get(0));
             if (relCoords[0] < panBoundary) {
                 panTimer = true;
                 pan(this, 'left');
@@ -230,6 +230,7 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
             }
         });
 
+
     function endDrag() {
         selectedNode = null;
         d3.selectAll('.ghostCircle').attr('class', 'ghostCircle');
@@ -243,6 +244,7 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
             draggingNode = null;
         }
     }
+
 
     // Helper functions for collapsing and expanding nodes.
 

@@ -36,3 +36,6 @@ stroke-width: 3px;
 .ghostCircle, .activeDrag .ghostCircle{
    display: none;
 }
+
+#tree-container {
+}
