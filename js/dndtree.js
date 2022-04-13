@@ -1,5 +1,5 @@
 // Get JSON data
-treeJSON = d3.json("json/flare.json", function(error, treeData) {
+treeJSON = d3.json("json/test.json", function(error, treeData) {
 
     // Calculate total nodes, max label length
     var totalNodes = 0;
@@ -164,16 +164,17 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
             // it's important that we suppress the mouseover event on the node being dragged. Otherwise it will absorb the mouseover event and the underlying node will not detect it d3.select(this).attr('pointer-events', 'none');
         })
         .on("drag", function(d) {
+
             if (d == root) {
                 return;
             }
             if (dragStarted) {
                 domNode = this;
-                //initiateDrag(d, domNode);
+                initiateDrag(d, domNode);
             }
 
             // get coords of mouseEvent relative to svg container to allow for panning
-            //relCoords = d3.mouse($('svg').get(0));
+            relCoords = d3.mouse($('svg').get(0));
             if (relCoords[0] < panBoundary) {
                 panTimer = true;
                 pan(this, 'left');
@@ -382,7 +383,7 @@ treeJSON = d3.json("json/flare.json", function(error, treeData) {
 
         // Enter any new nodes at the parent's previous position.
         var nodeEnter = node.enter().append("g")
-            .call(dragListener)
+            //.call(dragListener)
             .attr("class", "node")
             .attr("transform", function(d) {
                 return "translate(" + source.y0 + "," + source.x0 + ")";
